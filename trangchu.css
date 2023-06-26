@@ -1,0 +1,217 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+h2{
+  font-weight: bold;
+}
+h4{
+  margin-top: 50px;
+  margin-bottom: 20px;
+  font-style: italic;
+  font-weight: bold;
+  color: gray;
+}
+h6{
+  font-weight: bold;
+}
+ .container-spnb{
+  padding: 20px 50px;
+  width: 100%;
+  height: auto;
+} 
+  /* sanpham */
+  .silder-product-1-content  {
+    background-color: #4ca8d0;
+    padding: 12px;
+    border-radius: 20px;
+  }
+  .slider-product-1-items {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .slider-product-1-title h2 {
+    font-style: italic;
+    padding: 12px 0;
+   
+  }
+  .slider-product-1-item {
+    width: 19%;
+    background-color: #fff;
+    padding: 50px 12px 0 12px;
+    border-radius: 9px;
+    width: 200px;
+    margin-top: 30px;
+  }
+  .slider-product-1-text {
+    text-align: center;
+  }
+  .slider-product-1-item a {
+  text-decoration: none;
+  color: black;
+  }
+
+  .slider-product-1-item >img {
+    width: 100%;
+  }
+  .slider-product-1-text > p {
+    color: chocolate;
+    font-style: italic;
+  
+  }
+  
+  .slider-product-1-item:hover img {
+    transform: translateY(-15px);
+    cursor: pointer;
+  }
+  
+  .product-gallery-1-content-product {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    
+   }
+   .product-gallery-1-content-product-item {
+    width: 200px;
+    padding: 50px 12px 12px;
+    border: 7.7px solid rgb(235, 233, 233);
+    cursor: pointer;
+   }
+   .product-gallery-1-content-product-item >img {
+    width: 100%;
+    
+   }
+   .product-gallery-1-content-product-text {
+    color: black;
+    text-align: center;
+   }
+   .product-gallery-1-content-product-item a 
+   {
+    text-decoration: none;
+   }
+   .product-gallery-1-content-product-text p {
+    color: chocolate;
+    font-style: italic;
+   }
+   .product-gallery-1-content-product-item:hover img {
+    transform: translateY(-15px);
+   }
+  #nutMua > a{
+    
+    border: 1.5px solid black;
+    background-color: rgb(235, 233, 233);
+    border-radius: 3px;
+    text-decoration: none;
+    color: black;
+  }
+  .comment {
+    background-color: #e1e3e7;
+    border-radius: 9px;
+  }
+  #danhGia {
+    padding-left: 10px;
+    margin-right: 10px;
+    border-radius: 10px;
+    margin-left: 70px;
+  }
+  #danhGia h6 {
+    color: red;
+    cursor: pointer;
+    padding-left: 1100px;
+  }
+  .comment h5 {
+    padding-left: 10px;
+  }
+  #cot6Thanhtoan {
+    background-color: #d3d8de;
+    border-radius: 9px;
+    margin-top: -70px;
+  }
+  .adress {
+    margin-left: 10px;
+    margin-top: 20px;
+  }
+  #ttkh {
+    padding: 0px 30px 10px 30px;
+  }
+  /* sản phẩm */
+  .mauDienThoai>ul {
+    display: flex;
+  }
+  .mauDienThoai>ul>li {
+    border-radius: 5px;
+    border: 1.5px solid black;
+    margin-left: 10px;
+    height: 30px;
+    width: 60px;
+    text-align: center;
+    cursor: pointer;
+  }
+  .mauDienThoai>ul>li>input{
+    cursor: pointer;
+  }
+  .test {
+    display: flex;
+  }
+  /* #head1213 {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+  } */
+  .sale{
+    color:red;
+  }
+ 
+  #danhmucmo a{
+   color: black;
+  }
+  #menudienthoai{
+    display: block;
+}
+.search {
+
+    position: relative;
+    width: 100%;
+  }
+  .search__input{
+    margin: 24px auto;
+    position: relative;
+    margin-top: 15px auto;
+    position: relative;
+    width: 90%;
+  }
+  .search__input input{
+    font-size: 12px;
+    width: 100%;
+    margin-top: -10px;
+    height: 30px;
+    padding: 10px 0px 10px 40px;
+    border-radius: 9999px;
+    border: 0px;
+    transition: all .2s ease-in-out;
+    outline: none;
+    opacity: 0.8;
+  }
+  .search__input svg {
+   
+    position: absolute;
+    width: 15px;
+    height: 15px;
+  }
+ 
+  #danhmucmo a{
+    text-decoration: none;
+  }
+  #danhmucmo ul{
+    padding-left: 1px;
+  }
+ .menu a {
+    text-decoration: none;
+ }
+ .menu ul>li:hover a{
+    color: red;
+ }
+

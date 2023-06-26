@@ -1,0 +1,956 @@
+.tabs {
+
+  margin-top: 50px;
+  display: flex;
+  position: relative;
+  background-color: #ffff00;
+  box-shadow: 0 0 1px 0 rgba(24, 94, 224, 0.15), 0 6px 12px 0 rgba(24, 94, 224, 0.15);
+  padding: 0.5rem;
+  border-radius: 99px;
+  position: fixed;
+  z-index: 9999;
+}
+
+.tabs * {
+  z-index: 2;
+}
+
+.container-theodoi input[type="radio"] {
+  display: none;
+}
+
+.tab {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 20px;
+  width: 300px;
+  color: red;
+  font-weight: 900;
+  border-radius: 99px;
+  cursor: pointer;
+  transition: color 0.15s ease-in;
+}
+
+.container-theodoi{
+  margin-left: 20%;
+  margin-top: 44px;
+  padding-bottom: 10px;
+}
+
+.container-theodoi input[type="radio"]:checked + label {
+  color: #185ee0;
+}
+
+
+
+.container-theodoi input[id="radio-1"]:checked ~ .glider {
+  transform: translateX(0);
+}
+
+.container-theodoi input[id="radio-2"]:checked ~ .glider {
+  transform: translateX(100%);
+}
+.container-theodoi input[id="radio-3"]:checked ~ .glider {
+  transform: translateX(100%);
+}
+
+.container-theodoi input[id="radio-4"]:checked ~ .glider {
+  transform: translateX(0%);
+}
+.container-theodoi input[id="radio-5"]:checked ~ .glider {
+  transform: translateX(0%);
+}
+.container-theodoi input[id="radio-55"]:checked ~ .glider {
+  transform: translateX(10%);
+}
+.container-theodoi input[id="radio-6"]:checked ~ .glider {
+  transform: translateX(100%);
+}
+.container-theodoi input[id="radio-66"]:checked ~ .glider {
+  transform: translateX(100%);
+}
+.container-theodoi input[id="radio-7"]:checked ~ .glider {
+  transform: translateX(200%);
+}
+.container-theodoi input[id="radio-77"]:checked ~ .glider {
+  transform: translateX(200%);
+}
+
+.glider {
+  margin-top: -3px;
+  position: absolute;
+  display: flex;
+  height: 27px;
+  width: 300px;
+  background-color: #e6eef9;
+  z-index: 1;
+  border-radius: 99px;
+  transition: 0.25s ease-out;
+}
+
+.cardthanhtoan{
+  margin-top: 20px;
+  margin-left: 50px;
+  background-color: #ffff;
+  border-radius: 20px;
+  width:13%;
+  height:800px;
+  transition: border-radius 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.t1{
+  font-size: 22px;
+  font-family: Calibri;
+  padding-top: 22px;
+}
+a{
+  text-decoration: none;
+  color:black;
+}
+
+.input {
+  width: 300px;
+  border: none;
+  outline: none;
+  border-radius: 15px;
+  padding: 0.7em;
+  background-color: #ccc;
+  box-shadow: inset 2px 5px 10px rgba(102, 100, 100, 0.3);
+  transition: 300ms ease-in-out;
+}
+
+
+.mydict div {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 0.5rem;
+  justify-content: center;
+}
+
+.mydict input[type="radio"] {
+  clip: rect(0 0 0 0);
+  clip-path: inset(100%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.mydict input[type="radio"]:checked + span {
+  box-shadow: 0 0 0 0.2em #03adf0;
+  z-index: 1;
+}
+
+.mydict span {
+  margin-left: 10px;
+  width: 120px;
+  height: 60px;
+  display: block;
+  cursor: pointer;
+  background-color: #fff;
+  position: relative;
+  box-shadow: 0 0 0 0.0625em #b5bfd9;
+  color: #3e4963;
+  transition: background-color .5s ease;
+}
+.mydict input,span:hover{
+ padding:2px;
+}
+.mydict span::before{
+  width:172px;
+  height:92;
+}
+.maggthedt span{
+  font-size: 15px;
+  font-family: Calibri;
+}
+.maggthedt{
+  display: flex;
+  margin-left: 90px;
+  width:80%;
+  height:40px;
+  background-color: #e0e0e0;
+  border-radius: 15px;
+  margin-top: 30px;
+}
+#conta-saledt svg{
+  margin-top: -4px;
+
+}
+/* ---------------------------- */
+/* Customize the label (the checkbox-btn) */
+.checkbox-btn {
+  display: block;
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.checkbox-btn input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkbox-btn label {
+  cursor: pointer;
+  font-size: 14px;
+}
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 15px;
+  width: 15px;
+  border: 2.5px solid #14acd6;
+  transition: .2s linear;
+}
+.checkbox-btn input:checked ~ .checkmark {
+  background-color: transparent;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+  left: 50%;
+  top: 40%;
+  width: 10px;
+  height: 14px;
+  border: 2px solid #0ea021;
+  filter: drop-shadow(0px 0px 10px #0ea021);
+  border-width: 0 2.5px 2.5px 0;
+  transition: .2s linear;
+  transform: translate(-50%, -50%) rotate(-90deg) scale(0.2);
+}
+
+/* Show the checkmark when checked */
+.checkbox-btn input:checked ~ .checkmark:after {
+  visibility: visible;
+  opacity: 1;
+  transform: translate(-50%, -50%) rotate(0deg) scale(1);
+  animation: pulse 1s ease-in;
+}
+
+.checkbox-btn input:checked ~ .checkmark {
+  transform: rotate(45deg);
+  border: none;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: translate(-50%, -50%) rotate(0deg) scale(1);
+  }
+  50% {
+    transform: translate(-50%, -50%) rotate(0deg) scale(1.6);
+  }
+}
+.phuongthucthanhtoan{
+  width: 220px;
+  height: 28px;
+  background-color:rgb(225, 219, 219);
+  border: 0px;
+  border-radius: 5px;
+  color:rgb(113, 112, 112);
+  font-family: Calibri;
+  font-size: 18px;
+  font-weight: 200;
+  line-height: 3px;
+}
+.xacnhan{
+  width:150px;
+  height:40px;
+  font-size: 17px;
+  font-weight: 700;
+  border-radius: 10px;
+  border:0px;
+  color:white;
+  background-color:orange;
+  margin-top: 10px;
+  margin-left: 25px;
+}
+/* ============================================== */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 30px;
+}
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #73C0FC;
+  transition: .4s;
+  border-radius: 30px;
+}
+.slider:before {
+  position: absolute;
+  content: '';
+  height: 26px;
+  width: 26px;
+  border-radius: 20px;
+  top:2px;
+  left: 2px;
+  bottom: 2px;
+  z-index: 2;
+  background-color:rgb(255, 89, 0);
+  transition: .4s;
+}
+.sun svg {
+  position: absolute;
+  top: 6px;
+  left: 34px;
+  z-index: 1;
+  width: 20px;
+  height: 20px;
+}
+.moon svg {
+  fill: #73C0FC;
+  position: absolute;
+  top: 6px;
+  left: 5px;
+  z-index: 1;
+  width: 20px;
+  height: 20px;
+}
+.slider::after{
+    position: absolute;
+    right: -60px;
+    top: 7px;
+    font-weight: 600;
+    font-family: Calibri;
+    font-size: 18px;
+    color: #749ed7;
+}
+.input:checked + .slider {
+  background-color:yellow;
+}
+.input:checked + .slider::before {
+    color:yellow;
+  transform: translateX(30px);
+}
+
+/* ------------------------------------------- */
+
+.swiper-container-napdt {
+  width: 100%;
+  height: 500px;
+  overflow:hidden;
+}
+.swiper-container-napdt img{
+  border-radius: 10px;
+  width: 100%;
+ height:500px;
+ object-fit:fill;
+ overflow:hidden;
+}
+.cardmathangtrend {
+  overflow: visible;
+  width: 400px;
+  height: 870px;
+}
+.content {
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 300ms;
+  box-shadow: 0px 0px 10px 1px #000000ee;
+  border-radius: 5px;
+}
+.front,.back {
+  background-color: rgb(255, 81, 0);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.back {
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+.back::before {
+  position: absolute;
+  content: ' ';
+  display: block;
+  width: 160px;
+  height: 160%;
+  background: linear-gradient(90deg, transparent, orange, rgb(255, 0, 0), rgb(255, 0, 0), rgb(34, 255, 0), transparent);
+  animation: rotation_481 5000ms infinite linear;
+}
+.back-content {
+  position: absolute;
+  width: 97%;
+  height: 99%;
+  background-color: rgb(205, 202, 202);
+  border-radius: 5px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+@keyframes rotation_481 {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  0% {
+    transform: rotateZ(360deg);
+  }
+}
+.front {
+  transform: rotateY(180deg);
+  color: white;
+}
+@keyframes floating {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+@keyframes jump {
+  0% {
+    text-shadow: none;
+  }
+  50% {
+    text-shadow: 0 0 10px #8000f8;
+  }
+  100% {
+    text-shadow: none;
+  }
+}
+.element {
+    margin-top: -800px;
+    color:rgb(255, 89, 0);
+    font-family: sans-serif;
+    font-size: 23px;
+    font-weight: 600;
+  font-variant: small-caps;
+  animation: jump 0.5s infinite;
+}
+/* ------------------ */
+.live {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-style: italic;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .card-live {
+    filter: drop-shadow(46px 36px 24px #4090b5) drop-shadow(-55px -40px 25px #9e30a9);
+    animation: blinkShadowsFilter 8s ease-in infinite;
+  }
+  
+  .card-content {
+    display: grid;
+    align-content: center;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+    padding: 1em;
+    grid-template-rows: 0.1fr 0.7fr 0.25fr;
+    background-color: hsl(296, 59%, 10%);
+    width: 300px;
+    height:570px;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 80%, 100% 100%, 100% 100%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 80%, 100% 100%, 100% 100%, 0 100%);
+  }
+  .card-content::before {
+    content: "";
+    position: absolute;
+    width: 250%;
+    aspect-ratio: 1/1;
+    transform-origin: center;
+    background: linear-gradient(to bottom, transparent, transparent, #66e0ff, #66e0ff, #e366ff, #e366ff, transparent, transparent), linear-gradient(to left, transparent, transparent, #66e0ff, #66e0ff, #e366ff, #e366ff, transparent, transparent);
+    animation: rotate 5s infinite linear;
+  }
+  .card-content::after {
+    content: "";
+    position: absolute;
+    left: 1%;
+    width: 98%;
+    height: 99%;
+    background:rgb(29, 21, 21);
+    box-shadow: inset 0px 0px 30px 40px hsl(296, 59%, 10%);
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 80%, 100% 100%, 100% 100%, 0 100%);
+   clip-path: polygon(0 0, 100% 0, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 80%, 100% 100%, 100% 100%, 0 100%);
+    animation: backglitch 94ms linear infinite;
+  }
+  @keyframes backglitch {
+    0% {
+      box-shadow: inset 0px 20px 30px 40px hsl(296, 59%, 10%);
+    }
+  
+    50% {
+      box-shadow: inset 0px -20px 30px 40px hsl(296, 59%, 10.2%);
+    }
+  
+    to {
+      box-shadow: inset 0px 20px 30px 40px hsl(296, 59%, 10%);
+    }
+  }
+  
+  @keyframes rotate {
+    0% {
+      transform: rotate(0deg) translate(-50%, 20%);
+    }
+  
+    50% {
+      transform: rotate(180deg) translate(40%, 10%);
+    }
+  
+    to {
+      transform: rotate(360deg) translate(-50%, 20%);
+    }
+  }
+  
+  @keyframes blinkShadowsFilter {
+    0% {
+      filter: drop-shadow(46px 36px 28px rgba(64, 144, 181, 0.3411764706)) drop-shadow(-55px -40px 28px #9e30a9);
+    }
+  
+    25% {
+      filter: drop-shadow(46px -36px 24px rgba(64, 144, 181, 0.8980392157)) drop-shadow(-55px 40px 24px #9e30a9);
+    }
+  
+    50% {
+      filter: drop-shadow(46px 36px 30px rgba(64, 144, 181, 0.8980392157)) drop-shadow(-55px 40px 30px rgba(159, 48, 169, 0.2941176471));
+    }
+  
+    75% {
+      filter: drop-shadow(20px -18px 25px rgba(64, 144, 181, 0.8980392157)) drop-shadow(-20px 20px 25px rgba(159, 48, 169, 0.2941176471));
+    }
+  
+    to {
+      filter: drop-shadow(46px 36px 28px rgba(64, 144, 181, 0.3411764706)) drop-shadow(-55px -40px 28px #9e30a9);
+    }
+  }
+  /* =================================== */
+  .myVideo{
+    border-radius: 10px;
+    width:300px;
+    height:500px;
+    object-fit:fill;
+  }
+  
+.card-content span{
+color:orange;
+font-family: Calibri;
+font-size: 12px;
+font-variant: none;
+}
+/* =============================================================== */
+#header-ship{
+  text-align: center;
+  background-color: white;
+  margin: 0 auto;
+  width: 90%;
+}
+  .card ul{
+    display: flex;
+    margin: 0 auto;
+        width: 97%;
+        height: 100%;
+  }
+  .card li{
+        margin: 0 auto;
+        height: 100%;
+        
+  }
+  .card li:nth-child(1){
+    position: relative;
+   width: 5%;
+}
+.card li:nth-child(2){
+  display: block;
+ width: 16%;
+}
+#tenshop{
+  margin: 20px 10%;
+  font-size: 15px;
+  font-weight: 600;
+  font-family: Calibri;
+  white-space: nowrap;
+}
+#shop{
+  display: flex;
+}
+#logo{
+ border:2px solid white;
+ border-radius: 19px;
+ margin-left: 40%;
+ margin-top: 15px;
+}
+#imghang img{
+  border-radius: 4px;
+  width: 120px;
+  height: 120px;
+}
+.card li:nth-child(3){
+  margin-left: 10px;
+ width: 40%;
+}
+#tensp{
+  display: flex;
+}
+#tensp button{
+  border:0px solid grey ;
+  border-radius: 5px;
+  margin-left: 10%;
+  width: 70px;
+  height: 22px;
+  margin-top: 10px;
+  background-color: white;
+  font-family: 'Calibri';
+  font-size:14px;
+}
+#sp{
+  margin-top: 3%;
+  margin-left: 4%;
+  font-family: Calibri;
+  font-weight: 600;
+  color: rgb(43, 41, 41);
+}
+#bonho{
+  padding-top: 20px;
+  display: flex;
+}
+#bonho button{
+  margin-left: 10%;
+  margin-top: 25%;
+  line-height: 25px;
+  display: flex;
+  border:0px;
+  border-radius: 5px;
+  width: 70px;
+  height: 22px;
+  font-size: 13px;
+  text-indent: 5px;
+  white-space: nowrap;
+  background-color: white;
+}
+#bonho svg{
+  width: 15px;
+  height: 15px;
+}
+.card li:nth-child(4){
+ width: 0.5%;
+}
+.card li:nth-child(5){
+ width: 30%;
+}
+#chuvouchershop{
+  margin-top: 1%;
+  font-family: Calibri;
+  font-weight: 600;
+  color: red;
+}
+#chusale{
+  margin-left: -50px;
+  font-style: italic;
+  font-family: Times;
+  font-weight:600;
+  font-size: 14px;
+  letter-spacing: 1.5px;
+  color:#d9d503;
+}
+#phantramphivc{
+  font-family: Calibri;
+    margin-top: 4px;
+   font-size: 10px;
+   font-weight: 600;
+   color:rgb(126, 122, 122)
+}
+#dontoithieu{
+  font-family: Calibri;
+  font-size: 11px;
+  font-weight:bold;
+  color:rgb(8, 199, 199);
+}
+.price-input u{
+  color:grey;
+  font-family: Calibri;
+  font-size: 15px;
+  font-weight:bold;
+}
+.card li:nth-child(6){
+ width: 15%;
+}
+#baogia{
+  margin-top: 50%;
+  font-size: 15px;
+  font-weight: 600;
+  font-family: Calibri;
+}
+.lable1{
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+#logothecao {
+  width: 120px;
+  height: 60px;
+}
+#container-thecao{
+  width: 95%;
+  margin: 0 auto;
+  display: flex;
+}
+#thecao{
+  display:block;
+  width:1000px;
+  height: 500px;
+  border-radius: 20px;
+  margin-left: 50px;
+  margin-top: 20px;
+  transition: border-radius 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  background-color:beige;
+}
+#thanhcaidat{
+  position: relative;
+  margin: 2% auto;
+  width:50%;
+  height:70px;
+  background:#cfc3c3;
+  border-radius: 25px;
+  padding-top: 20px;
+text-align: center;
+
+}
+#container-setting{
+  margin-top:130px;
+  font-size: 20px;
+  font-family: Calibri;
+  font-weight: 600;
+}
+#icon-caidat{
+  position: absolute;
+  left: 3%;
+}
+#icon-caidat1{
+  position: absolute;
+  right: 3%;
+}
+.card-xacnhan{
+  position: relative;
+  width: 50%;
+  height: 200px;
+  background-color: white;
+  border-radius: 30px;
+  margin:50px auto;
+  transition: border-radius 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+#img-card-xacnhan img{
+  position: absolute;
+  width:130px;
+  height:150px;
+  border:1px solid grey;
+ left: 4%;
+ top:13%;
+}
+#ten-sp-xacnhan{
+  position: absolute;
+  font-size: 20px;
+  font-family: Calibri;
+  font-weight: 600;
+  left: 30%;
+  top: 10%;
+}
+#maqrcode-xacnhan img{
+  position: absolute;
+  width:70px;
+  height:70px;
+ left: 37%;
+ top: 30%;
+}
+#ktr-xacnhan{
+  position: absolute;
+  font-size: 14px;
+  font-family: Calibri;
+  font-weight: 50;
+  text-align: center;
+  left: 25%;
+  top: 70%;
+}
+#icon-xacnhan{
+  position: absolute;
+ left: 62%;
+ top: 40%;
+}
+#text-dangcho{
+  position: absolute;
+  font-size: 15px;
+  font-weight: 600;
+  color:rgb(70, 98, 85);
+ left: 67%;
+ top: 42%;
+}
+#btn-huydon button{
+  position: absolute;
+  width:90px;
+  height:33px;
+  border-radius: 7px;
+  background-color: antiquewhite;
+  border:0.5px solid rgb(219, 215, 215);
+  left: 85%;
+  top: 80%;
+  white-space: nowrap;
+  
+}
+#btn-huydon span{
+  font-size: 15px;font-family: Calibri;font-variant: small-caps;color:grey
+}
+#text-menu-theodoi{
+  font-size: 17px;
+  font-family: Calibri;
+}
+.card-vanchuyen{
+  position: relative;
+  width: 50%;
+  height: 200px;
+  background-color: #f8f6f6;
+  border-radius: 30px;
+  margin: 3% auto;
+  transition: border-radius 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+#img-vanchuyen img{
+  position: absolute;
+  width:130px;
+  height:150px;
+  border:1px solid grey;
+ left: 4%;
+ top: 13%;
+}
+#ten-sp-vanchuyen{
+  position: absolute;
+  font-size: 17px;
+  font-family: Calibri;
+  font-weight: 600;
+  left: 30%;
+  top: 10%;
+}
+#img-map-vanchuyen img{
+  position: absolute;
+  width:200px;
+  height:100px;
+  border-radius: 10px;
+  border:0.5px solid rgb(199, 198, 198);
+  left: 29%;
+  top: 30%;
+}
+#xem-map-vanchuyen{
+  position: absolute;
+font-size: 14px;
+font-family: Calibri;
+font-weight: 50;
+text-align: center;
+color:#002c8a;
+left: 37%;
+top: 85%;
+}
+#icon-address-vc{
+  position: absolute;
+  left: 60%;
+  top: 40%;
+}
+#donhang-vc p{
+  position: absolute;
+  left: 65%;
+  top: 38%;
+  font-size: 14px;
+  font-weight: 600;
+  color:rgb(70, 98, 85);
+  font-family: Calibri;
+  white-space:nowrap;
+}
+#img-dagiao img{
+  position: absolute;
+  left: 36%;
+  top: 26%;
+  width:100px;
+  height:100px;
+  border-radius: 10px;
+  border:0.5px solid rgb(199, 198, 198);
+}
+#text-dagiao{
+  position: absolute;
+  font-size: 14px;
+  font-family: Calibri;
+  font-weight: 50;
+  text-align: center;
+  color:#002c8a;
+  left: 32%;
+  top: 80%;
+}
+#btn-nhanhang button{
+  position: absolute;
+  left: 85%;
+  top: 85%;
+  width:90px;
+  height:20px;
+  border:0px;
+  border-radius: 5px;
+  background-color: rgb(9, 233, 9);
+  color:white;
+}
+#btn-konhanhang button{
+  position: absolute;
+  left: 76%;
+  top: 84%;
+  padding: 2px 5px; 
+  border:0px;
+  border-radius: 5px;
+  background-color: rgb(255, 242, 0);
+  color:rgb(244, 11, 11);
+}
+.chumenu1 {
+  font-size: 1px; 
+  color:#0e0f11;
+  margin-left: 10px;
+  margin-top: 11px;
+}
+.row{
+  display: flex;
+}
+.footer-light{
+  background-color:black ;
+  width: 100%;
+  height: 400px;
+}

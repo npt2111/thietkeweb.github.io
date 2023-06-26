@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="dnhap.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+    <title>Đăng Nhập</title>
+</head>
+<body onload="CheckLogin()">
+    <section>
+        <div class="form-box">
+            <div class="form-value" method="post" name="form">
+                <form action="" >
+                    <h2>Đăng Nhập</h2>
+                    <div class="input">
+                        <input id="username" type="text" placeholder="Tên đăng nhập, Số điện thoại">
+                    </div>
+                    <div class="input">
+                        <input id="pass"type="password" placeholder="Mật khẩu">
+                        <div id="eye" onclick="myfunction()">
+                            <i id="eye1" class="fa fa-eye"></i>
+                            <!-- <i id="eye2" class="fa fa-eye-slash"></i> -->
+                    </div>
+                    </div>
+                    <div class="button">
+                        <button id="dangnhap" class="dn" onclick="Login()">Đăng Nhập</button>
+                    </div>
+                    <div class="links">
+                        <p>Bạn chưa có tài khoản?</p>
+                        <a href="dky.html">Đăng ký</a>
+                    </div>
+                    <div class="tc">
+                        <a href="../Light.html">Quay lại trang chủ</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <script type="text/javascript">
+        var x =true;
+        function myfunction(){
+            if(x){
+                document.getElementById('pass').type = "text";
+                x=false;
+            }else{
+                document.getElementById('pass').type = "password";
+                x=true;
+            }
+        }
+    </script>
+    <script src="../js/login.js"></script>
+</body>
+
+<script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" integrity="sha384-rOA1PnstxnOBLzCLMcre8ybwbTmemjzdNlILg8O7z1lUkLXozs4DHonlDtnE7fpc" crossorigin="anonymous"></script>
+</html>

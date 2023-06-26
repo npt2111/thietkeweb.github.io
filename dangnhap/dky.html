@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng ký</title>
+    <link rel="stylesheet" href="dk.css">
+</head>
+<body>
+    <section>
+        <div class="box">
+            <div class="value">
+                <form name="form2" action="#">
+                <h2>Đăng Ký</h2>
+                <div class="input">
+                    <input type="text" id="username" placeholder="Tên đăng nhập">
+                </div>
+                <div class="input">
+                    <input type="email" id="email" placeholder="Email">
+                </div>
+                <div class="input">
+                    <input type="number" id="sdt" placeholder="Số điện thoại">
+                </div>
+                <div class="input">
+                    <input id="pass1" type="password" placeholder="Mật khẩu">
+                </div>
+                <div class="input">
+                    <input id="pass2" type="password" placeholder="Nhập lại mật khẩu">
+                </div>
+                <i id="eye" class="fa fa-eye" onclick="myfunction()"></i>
+                <div class="button">
+                    <button id="dangky" class="dk" onclick="return Email()">Đăng Ký</button>
+                </div>
+                <div class="links">
+                    <p>Bạn đã có tài khoản?</p>
+                    <a href="dnhap.html">Đăng nhập</a>
+                </div>
+                <div class="tc">
+                    <a href="../Light.html">Quay lại trang chủ</a>
+                </div>
+            </form>
+            </div>
+        </div>
+    </section>
+    <script type="text/javascript">
+        var x =true;
+        function myfunction(){
+            if(x){
+                document.getElementById('pass1').type = "text";
+                document.getElementById('pass2').type = "text";
+                x=false;
+            }else{
+                document.getElementById('pass1').type = "password";
+                document.getElementById('pass2').type = "password";
+                x=true;
+            }
+        }
+
+        //
+        let username = document.getElementById("username").value
+        let email = document.getElementById("email").value
+        let sdt = document.getElementById("sdt").value
+        let pass1 = document.getElementById("pass1").value
+        let pass2 = document.getElementById("pass2").value
+
+        function Email(inputemail){
+            var checkemail = /^[\w\.]+\@\w+\.[a-zA-Z]{2,3}(\.[a-zA-Z]{2,3})?$/;
+            if(checkemail.test(inputemail)){
+                return true;
+            }else{
+                
+                document.form2.email.focus();
+            }
+        }
+        function SDT(inputsdt){
+            var checkSdt=/^[0-9]+$/;
+            if(checkSdt.test(inputsdt)){
+                return true;
+            }else{
+                alert("Lỗi!")
+                document.form2.sdt.focus();
+            }
+        }
+
+    </script>
+</body>
+<script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" integrity="sha384-rOA1PnstxnOBLzCLMcre8ybwbTmemjzdNlILg8O7z1lUkLXozs4DHonlDtnE7fpc" crossorigin="anonymous"></script>
+</html>
